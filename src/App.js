@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 class App extends Component {
   render() {
     return (
@@ -19,6 +22,12 @@ class App extends Component {
           >
             Learn React
           </a>
+          <CssBaseline />
+          <div style={{ marginTop: 20 + 'px' }}>
+            <Button variant="contained" color="primary">
+              Hello World
+            </Button>
+          </div>
         </header>
       </div>
     );
