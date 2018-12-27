@@ -4,11 +4,11 @@ const requireModule = require.context('./', false, /\.js$/);
 const stores = {};
 
 requireModule.keys().forEach(fileName => {
-  const storeName = camelCase(fileName.replace(/(\.\/|\.ts)/g, ''));
+  if (fileName === './index.js') return;
 
-  stores[storeName] = {
-    ...requireModule(fileName)
-  };
+  const storeName = camelCase(fileName.replace(/(\.\/|\.js)/g, ''));
+
+  stores[storeName] = requireModule(fileName).default;
 });
-console.log('stores', stores);
+
 export default stores;

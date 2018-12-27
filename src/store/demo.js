@@ -2,7 +2,7 @@ import { observable, computed, action, autorun } from 'mobx';
 import { demo } from '../actions';
 
 class Demo {
-  @observable name = '';
+  @observable name = 'DH';
 
   @computed
   get fullName() {
@@ -14,9 +14,13 @@ class Demo {
     this.name = name;
   };
 
+  @action
   demo() {
-    demo();
+    demo(this.fullName);
   }
+
+  // autorun
+  print = autorun(e => console.log(e, this.fullName));
 }
 
 export default new Demo();

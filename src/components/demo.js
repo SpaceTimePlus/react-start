@@ -2,24 +2,37 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 
 export default
-@inject('store')
+@inject('demo')
 @observer
-class Detail extends Component {
+class Demo extends Component {
   constructor(props) {
     super(props);
-    this.store = props.store.demo;
-    this.state = {};
+    this.store = props.demo;
+    this.state = {
+      title: 'TITLE',
+      name: 'DEMO'
+    };
   }
 
-  componentWillMount() {}
+  componentWillMount() {
+    console.log('this.store', this.store);
+  }
 
-  demoMethods() {
-    console.log('demoMethods');
+  demoMethods(param) {
+    // 更新组件内状态
+    this.setState({
+      title: 'TTTTT'
+    });
+    // 调用action更新store状态
+    this.store.setName('LL');
+    this.store.demo();
   }
 
   render() {
-    const _o = this.store.detail;
-
-    return <div onClick={this.demoMethods()}>DEMO</div>;
+    return (
+      <div onClick={() => this.demoMethods('Click DEMO')}>
+        {this.store.fullName} {this.state.title} {this.state.name}
+      </div>
+    );
   }
 }
