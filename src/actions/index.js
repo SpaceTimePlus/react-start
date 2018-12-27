@@ -7,4 +7,5 @@ export const demo = async payload => {
   setTimeout(() => {
     console.log('TTTT');
   }, 3000);
+  return 30;
 };

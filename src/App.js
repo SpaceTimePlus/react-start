@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import logo from './assets/images/logo.svg';
 import './assets/css/App.css';
 
+import { configure } from 'mobx';
 import { Provider } from 'mobx-react';
-
 import stores from './store';
 
 import Button from '@material-ui/core/Button';
 import Demo from './components/demo';
 
-console.log('stores2', stores);
+// 开启严格模式
+configure({ enforceActions: 'observed' });
 
 class App extends Component {
   render() {
