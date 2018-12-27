@@ -52,3 +52,5 @@ npm install --save react-styleguidist
 ````
 HTTPS=true npm start
 ````
+
+## 用 husky 和 prettier 保证团队代码格式一致性
