@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { observable, action } from 'mobx';
 import { inject, observer, disposeOnUnmount } from 'mobx-react';
 
-import { Link } from 'react-router-dom';
-
 import Button from '@material-ui/core/Button';
 import logo from '../assets/images/logo.svg';
 

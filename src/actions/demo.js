@@ -1,11 +1,9 @@
 /***
  * ACTIONS
  */
+import * as http from '../resource/http';
 
 export const demo = async payload => {
-  console.log('demo action run', payload);
-  setTimeout(() => {
-    console.log('TTTT');
-  }, 3000);
-  return 30;
+  let result = await http.get('http://portal.weiwuu.com/id');
+  return result.body.data;
 };
