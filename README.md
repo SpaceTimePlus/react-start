@@ -55,7 +55,7 @@ HTTPS=true npm start
 
 ## 用 husky 和 prettier 保证团队代码格式一致性
 
-### Mobx
+### Mobx 组件
 ````
 注: 
 1.永远只传递拥有 observable 属性的对象
@@ -65,3 +65,5 @@ HTTPS=true npm start
 5.晚一点使用间接引用值
 6.尽早绑定函数
 ````
+
+### TODO MOBX ROUTER
