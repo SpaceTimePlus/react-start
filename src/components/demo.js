@@ -12,15 +12,12 @@ class Demo extends Component {
   constructor(props) {
     super(props);
     this.store = props.demo;
-    // 调用bind方法来绑定事件
-    this.demoMethods = this.demoMethods.bind(this);
   }
 
   componentWillMount() {
     console.log('this.store', this.store);
   }
 
-  @action.bound
   componentWillReact() {
     console.log('I will re-render, since the todo has changed!');
   }
@@ -30,7 +27,8 @@ class Demo extends Component {
     console.log('disposeOnUnmount');
   }
 
-  @action
+  // 自动绑定action
+  @action.bound
   demoMethods(e) {
     console.log('e', e.currentTarget.getAttribute('dataparam'));
     // 严格模式下，observable 状态必须通过action来更新
