@@ -7,20 +7,15 @@
     "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
     "dayjs": "^1.7.8",
-    "lint-staged": "^8.1.0",
     "lodash": "^4.17.11",
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.3",
-    "mobx-react-router": "^4.0.5",
     "mobx-utils": "^5.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
-    "react-router-config": "^4.4.0-beta.6",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
-    "source-map-explorer": "^1.6.0"
+    "react-router-dom": "^4.3.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -63,10 +58,13 @@
     "@storybook/react": "^4.1.3",
     "babel-loader": "^8.0.4",
     "husky": "^1.3.0",
+    "lint-staged": "^8.1.0",
     "mobx-react-devtools": "^6.0.3",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.3",
     "react-app-rewired": "^1.6.2",
-    "react-styleguidist": "^8.0.6"
+    "react-styleguidist": "^8.0.6",
+    "source-map-explorer": "^1.6.0",
+    "react-scripts": "2.1.1"
   }
 }

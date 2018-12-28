@@ -7,5 +7,3 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(<App />, document.getElementById('root'));
 
 serviceWorker.register();
-
-console.log('REACT_APP_NAME', process.env.REACT_APP_NAME);
