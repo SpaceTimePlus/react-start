@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { observable, action } from 'mobx';
 import { inject, observer, disposeOnUnmount } from 'mobx-react';
-
-import Button from '@material-ui/core/Button';
-import logo from '../assets/images/logo.svg';
+import * as AFRAME from 'aframe';
 
 export default
 @inject('demo')
@@ -25,6 +23,15 @@ class Page extends Component {
     let querys = new URLSearchParams(this.props.location.search);
     let id = querys.get('id');
     console.log('componentDidMount', id);
+
+    AFRAME.registerComponent('log', {
+      schema: { type: 'string' },
+
+      init: function() {
+        var stringToLog = this.data;
+        console.log('stringToLog', stringToLog);
+      }
+    });
   }
 
   componentDidUpdate(prevProps) {
@@ -53,15 +60,24 @@ class Page extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>PAGE 2</p>
-          <div style={{ marginTop: 20 + 'px' }}>
-            <Button variant="contained" color="primary" onClick={this.routerTo}>
-              Hello World
-            </Button>
-          </div>
-        </header>
+        <a-scene log="Hello, Scene!">
+          <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" />
+          <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" />
+          <a-cylinder
+            position="1 0.75 -3"
+            radius="0.5"
+            height="1.5"
+            color="#FFC65D"
+          />
+          <a-plane
+            position="0 0 -4"
+            rotation="-90 0 0"
+            width="40"
+            height="4"
+            color="#7BC8A4"
+          />
+          <a-sky color="#000" />
+        </a-scene>
       </div>
     );
   }

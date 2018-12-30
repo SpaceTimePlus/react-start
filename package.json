@@ -16,7 +16,8 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "aframe": "^0.8.2"
   },
   "scripts": {
     "start": "react-app-rewired start",
