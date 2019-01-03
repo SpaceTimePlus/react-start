@@ -5,6 +5,12 @@
   "dependencies": {
     "@material-ui/core": "^3.7.1",
     "@material-ui/icons": "^3.0.1",
+    "aframe": "^0.8.2",
+    "aframe-gif-shader": "^0.2.0",
+    "aframe-multi-video-component": "^2.1.0",
+    "aframe-physics-system": "^3.3.0",
+    "aframe-rain": "^1.0.2",
+    "aframe-room-component": "^0.3.0",
     "axios": "^0.18.0",
     "dayjs": "^1.7.8",
     "localforage": "^1.7.3",
@@ -16,8 +22,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "aframe": "^0.8.2"
+    "react-router-dom": "^4.3.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
